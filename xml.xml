@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+<students>
+<student id="S001">
+<name>Ajay Rawat</name>
+<age>25</age>
+<gender>Male</gender>
+<course>Computer Science</course>
+<email>ajay@example.com</email>
+<phone>9876543210</phone>
+</student>
+<student id="S002">
+<name>Diya Bisht</name>
+<age>22</age>
+<gender>Female</gender>
+<course>Data Science</course>
+<email>diya@example.com</email>
+<phone>9876543211</phone>
+</student>
+</students>
+<!-- Book Information -->
+<books>
+<book id="B101"><title>Introduction to Machine Learning</title>
+<author>Tom Mitchell</author>
+<publisher>McGraw-Hill</publisher>
+<year>1997</year>
+<isbn>978-0070428072</isbn>
+</book>
+<book id="B102">
+<title>Artificial Intelligence: A Modern Approach</title>
+<author>Stuart Russell, Peter Norvig</author>
+<publisher>Pearson</publisher>
+<year>2020</year>
+<isbn>978-0134610993</isbn>
+</book>
+</books>
+<employees>
+<employee id="E001">
+<name>Rahul Verma</name>
+<position>Software Engineer</position>
+<department>IT</department>
+<email>rahul@example.com</email>
+<phone>9876543212</phone>
+<salary>90000</salary>
+</employee>
+<employee id="E002">
+<name>Priya Singh</name>
+<position>HR Manager</position><department>Human Resources</department>
+<email>priya@example.com</email>
+<phone>9876543213</phone>
+<salary>75000</salary>
+</employee>
+</employees>
+</database>

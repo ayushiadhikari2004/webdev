@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Color Changer & Image Slider</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+text-align: center;
+margin: 0;
+padding: 0;
+transition: background-color 0.5s ease-in-out;
+}
+h1 {
+color: #333;
+margin-top: 20px;
+}
+.color-buttons {
+margin: 20px;
+}
+.color-btn {
+padding: 10px 20px;
+margin: 5px;border: none;
+cursor: pointer;
+font-size: 16px;
+color: white;
+border-radius: 5px;
+transition: 0.3s;
+}
+.color-btn:hover {
+opacity: 0.8;
+}
+.slider-container {
+position: relative;
+width: 80%;
+max-width: 700px;
+margin: 30px auto;
+overflow: hidden;
+border-radius: 10px;
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+.slider {
+display: flex;
+width: 400%;
+transition: transform 1s ease-in-out;
+}
+.slide {
+width: 100%;flex: 1 0 100%;
+}
+.slide img {
+width: 100%;
+height: 250px;
+object-fit: cover;
+border-radius: 10px;
+}
+.prev, .next {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+background-color: rgba(0, 0, 0, 0.5);
+color: white;
+padding: 10px;
+border: none;
+cursor: pointer;
+border-radius: 50%;
+font-size: 20px;
+transition: 0.3s;
+}
+.prev:hover, .next:hover {
+background-color: black;
+}
+.prev { left: 10px; }
+.next { right: 10px; }</style>
+</head>
+<body>
+<h1>Color Changer & Image Slider</h1>
+<div class="color-buttons">
+<button class="color-btn" style="background-color: #ff5733;"
+onclick="changeColor('#ff5733')">Red</button>
+<button class="color-btn" style="background-color: #33ff57;"
+onclick="changeColor('#33ff57')">Green</button>
+<button class="color-btn" style="background-color: #3357ff;"
+onclick="changeColor('#3357ff')">Blue</button>
+<button class="color-btn" style="background-color: #f4c242;"
+onclick="changeColor('#f4c242')">Yellow</button>
+<button class="color-btn" style="background-color: #8e44ad;"
+onclick="changeColor('#8e44ad')">Purple</button>
+</div>
+<div class="slider-container">
+<div class="slider" id="slider">
+<div class="slide"><img src="https://gehu.ac.in/assets/images/GEHU-BTL-b80ef66e.webp"
+alt="GEHU Bhimtal"></div>
+<div class="slide"><img src="https://lookaside.fbsbx.com/lookaside/crawler/media/?
+media_id=880431600782829" alt="GEHU Bhimtal"></div>
+<div class="slide"><img
+src="https://image-static.collegedunia.com/public/college_data/images/appImage/
+57212_cover2.jpg?h=260&w=360&mode=crop" alt="GEHU Bhimtal"></div>
+<div class="slide"><img
+src="https://lookaside.instagram.com/seo/google_widget/crawler/?
+media_id=3295975471895630683" alt="GEHU Bhimtal"></div></div>
+<button class="prev" onclick="prevSlide()"> ❮ </button>
+<button class="next" onclick="nextSlide()"> ❯ </button>
+</div>
+<script>
+function changeColor(color) {
+document.body.style.backgroundColor = color;
+}
+let currentSlide = 0;
+const slides = document.querySelectorAll(".slide");
+const totalSlides = slides.length;
+function updateSlider() {
+document.getElementById("slider").style.transform = `translateX(-${currentSlide * 100}%)`;
+}
+function nextSlide() {
+currentSlide = (currentSlide + 1) % totalSlides;
+updateSlider();
+}
+function prevSlide() {
+currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+updateSlider();
+}
+setInterval(nextSlide, 3000);</script>
+</body>
+</html>

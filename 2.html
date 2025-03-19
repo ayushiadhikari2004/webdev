@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS3 Practical Demo</title>
+<style>
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #f8f9fa;
+}
+h1, h2 {
+  text-align: center;
+  margin: 20px 0;
+  color: #0056b3;
+}
+p {
+  text-align: center;
+  font-size: 18px;
+  color: #444;
+  width: 80%;
+  margin: auto;
+}
+section {
+  padding: 40px;
+  text-align: center;
+  border-bottom: 2px solid #ddd;
+}
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  font-size: 20px;
+  color: white;
+  background: linear-gradient(90deg, #007bff, #00b4d8);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+.btn:hover {
+  background: linear-gradient(90deg, #00b4d8, #007bff);
+  transform: scale(1.1);
+}
+.styled-img {
+  width: 350px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+.styled-img:hover {
+  transform: scale(1.05);
+}
+@keyframes gradientBorder {
+  0% { border-image-source: linear-gradient(45deg, #ff5733, #ffcc33); }
+  50% { border-image-source: linear-gradient(45deg, #33ff57, #33ccff); }
+  100% { border-image-source: linear-gradient(45deg, #ff33cc, #5733ff); }
+}
+.gradient-border {
+  width: 300px;
+  height: 100px;
+  margin: 30px auto;
+  text-align: center;
+  line-height: 100px;
+  font-size: 22px;
+  font-weight: bold;
+  border: 12px solid;
+  border-image-slice: 1;
+  animation: gradientBorder 3s infinite alternate;
+}
+.parallax {
+    background-image: url('image.jpg');
+  height: 400px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+.center-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.box {
+  width: 320px;
+  height: 200px;
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+</style>
+</head>
+<body>
+<h1>CSS3 Practical Demonstration</h1>
+<p>This page showcases various CSS3 features such as buttons, gradients, parallax effects, and Flexbox centering.</p>
+<section>
+  <h2>Interactive Button</h2>
+  <p>Click the button to see a hover effect with a color transition.</p>
+  <button class="btn">Hover Me</button>
+</section>
+<section>
+  <h2>Styled Image with Effects</h2>
+  <p>The image below has rounded corners, a shadow effect, and a hover zoom effect.</p>
+  <img src="gehu-logo.jpeg" alt="GEHU Logo" class="styled-img">
+</section>
+<section>
+  <h2>Animated Gradient Border</h2>
+  <p>This box has a border that changes colors dynamically using CSS animations.</p>
+  <div class="gradient-border">Gradient Border</div>
+</section>
+<section class="parallax">
+  Smooth Parallax Scrolling
+</section>
+<section>
+  <h2>Centered Box using Flexbox</h2>
+  <p>This box is perfectly centered using CSS Flexbox.</p>
+  <div class="center-box">
+    <div class="box">Centered Box with Gradient Background</div>
+  </div>
+</section>
+</body>
+</html>
